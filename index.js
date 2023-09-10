@@ -8,8 +8,8 @@ app.get('/', function(request, respons){
     respons.sendFile(__dirname + '/index.html');
 });
 
-users = []; 
-connections = [];
+users = []; //массив со всеми пользователями
+connections = []; //массив со всеми подключениями
 
 io.sockets.on('connection', function(socket) {
     console.log("Соединение");
